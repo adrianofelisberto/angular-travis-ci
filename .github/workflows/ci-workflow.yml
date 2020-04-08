@@ -5,8 +5,9 @@ on:
       - master
       - develop
 jobs:
-  deploy:
+  sonar:
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         node-version: [12.x]
@@ -18,13 +19,25 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm run build --prod --if-present
+      - run: npm run build --if-present
+      - run: npm test
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  deploy:
+    runs-on: ubuntu-latest
 
-      - name: Deploy to netlify
-        uses: actions/checkout@master
+    steps:
+      - uses: actions/checkout@master
+      - name: Publish
+        uses: netlify/actions/cli@master
         with:
           args: deploy --dir=dist --functions=functions
           secrets: '["NETLIFY_AUTH_TOKEN", "DEV_NETLIFY_SITE_ID"]'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           DEV_NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
+        
