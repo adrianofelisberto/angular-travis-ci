@@ -18,8 +18,13 @@ script:
   - npm run sonar
   - npm run build
 
+skip_cleanup: true
+on:
+  branch: master
+
 deploy:
   provider: netlify
   site: $NETLIFY_SITE_ID
   auth: $NETLIFY_ACCESS_TOKEN
+  dir: dist
   edge: true
