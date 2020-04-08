@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TestComponent } from './test.component';
 
 describe('TestComponent', () => {
-  let component: TestComponent;
+  // let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
 
   beforeEach(async(() => {
@@ -15,7 +15,7 @@ describe('TestComponent', () => {
 
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(TestComponent);
+    fixture = TestBed.createComponent(TestComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
