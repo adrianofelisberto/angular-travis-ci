@@ -23,7 +23,7 @@ jobs:
       - name: Deploy to netlify
         uses: actions/checkout@master
         with:
-          args: deploy --dir=workflow-git-hub --functions=functions
+          args: deploy --dir=dist --functions=functions
           secrets: '["NETLIFY_AUTH_TOKEN", "DEV_NETLIFY_SITE_ID"]'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
