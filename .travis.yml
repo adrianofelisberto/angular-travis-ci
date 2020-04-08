@@ -2,7 +2,6 @@ language: node_js
 node_js:
     - "12"
 dist: trusty
-sudo: required
 addons:
     chrome: stable
     sonarcloud:
@@ -17,14 +16,10 @@ script:
   - ng lint
   - npm run test
   - npm run sonar
-
-before_deploy:
-  - npm install netlify-cli -g
   - npm run build
 
 deploy:
-  provider: script
-  script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./dist
-  skip_cleanup: true
-  on:
-    branch: master
+  provider: netlify
+  site: $NETLIFY_SITE_ID
+  auth: $NETLIFY_ACCESS_TOKEN
+  edge: true
