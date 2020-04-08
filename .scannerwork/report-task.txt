@@ -1,0 +1,7 @@
+organization=adrianofelisberto
+projectKey=adrianofelisberto_angular-workflow-git-hub
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.6595
+dashboardUrl=https://sonarcloud.io/dashboard?id=adrianofelisberto_angular-workflow-git-hub
+ceTaskId=AXFZPFz15hPNsw8tBayo
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXFZPFz15hPNsw8tBayo

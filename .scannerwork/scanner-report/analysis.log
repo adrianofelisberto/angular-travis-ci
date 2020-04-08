@@ -1,0 +1,70 @@
+SonarCloud plugins:
+  - SonarCSS 1.2.0.1325 (cssfamily)
+  - SonarPLSQL 3.4.1.2576 (plsql)
+  - SonarScala 1.7.0.883 (sonarscala)
+  - C# Code Quality and Security 8.6.0.16497 (csharp)
+  - Vulnerability Analysis 8.2.1.1259 (security)
+  - SonarJava 6.2.0.21135 (java)
+  - SonarHTML 3.2.0.2082 (web)
+  - SonarFlex 2.5.1.1831 (flex)
+  - SonarXML 2.0.1.2020 (xml)
+  - SonarTS 2.1.0.4359 (typescript)
+  - VB.NET Code Quality and Security 8.6.0.16497 (vbnet)
+  - SonarSwift 4.2.2.77 (swift)
+  - SonarCFamily 6.8.0.16475 (cpp)
+  - SonarPython 2.8.0.6204 (python)
+  - JaCoCo 1.0.2.475 (jacoco)
+  - Mercurial 1.1.2 (scmmercurial)
+  - SonarGo 1.7.0.883 (go)
+  - SonarKotlin 1.7.0.883 (kotlin)
+  - SonarTSQL 1.4.0.3334 (tsql)
+  - SonarApex 1.7.0.883 (sonarapex)
+  - SonarJS 6.2.1.12157 (javascript)
+  - SonarRuby 1.7.0.883 (ruby)
+  - Vulnerability Rules for C# 8.2.1.1259 (securitycsharpfrontend)
+  - Vulnerability Rules for Java 8.2.1.1259 (securityjavafrontend)
+  - License for SonarLint 8.0.0.6595 (license)
+  - SonarCOBOL 4.4.0.3403 (cobol)
+  - Vulnerability Rules for Python 8.2.1.1259 (securitypythonfrontend)
+  - Git 1.11.0.11 (scmgit)
+  - SonarPHP 3.3.0.5166 (php)
+  - SonarABAP 3.8.0.2034 (abap)
+  - Vulnerability Rules for PHP 8.2.1.1259 (securityphpfrontend)
+Global server settings:
+  - email.from=noreply@sonarcloud.io
+  - email.fromName=SonarCloud
+  - email.prefix=[SonarCloud]
+  - sonar.auth.bitbucket.enabled=true
+  - sonar.auth.microsoft.enabled=true
+  - sonar.core.id=1BD809FA-AWHW8ct9-T_TB3XqouNu
+  - sonar.core.serverBaseURL=https://sonarcloud.io
+  - sonar.core.startTime=2020-04-07T11:12:30+0200
+  - sonar.dbcleaner.weeksBeforeDeletingAllSnapshots=480
+  - sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByMonth=4
+  - sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByWeek=1
+  - sonar.java.collectAnalysisErrors=true
+  - sonar.leak.period=30
+  - sonar.lf.enableGravatar=true
+  - sonar.lf.logoWidthPx=105
+  - sonar.organizations.anyoneCanCreate=true
+  - sonar.organizations.createPersonalOrg=true
+  - sonar.plsql.file.suffixes=sql,tab,pkb
+  - sonar.tsql.file.suffixes=.tsql
+Project server settings:
+  - sonar.autoscan.enabled=false
+Project scanner properties:
+  - sonar.exclusions=**/node_modules/**
+  - sonar.host.url=https://sonarcloud.io
+  - sonar.organization=adrianofelisberto
+  - sonar.projectBaseDir=/home/adriano/angular-workspace/angular-workflow-git-hub
+  - sonar.projectKey=adrianofelisberto_angular-workflow-git-hub
+  - sonar.projectVersion=1.0
+  - sonar.scanner.app=ScannerCli
+  - sonar.scanner.appVersion=3.1.0.1141
+  - sonar.sourceEncoding=UTF-8
+  - sonar.sources=src
+  - sonar.test.inclusions=**/*.spec.ts
+  - sonar.tests=src
+  - sonar.typescript.lcov.reportPaths=coverage/lcov.info
+  - sonar.verbose=true
+  - sonar.working.directory=/home/adriano/angular-workspace/angular-workflow-git-hub/.scannerwork

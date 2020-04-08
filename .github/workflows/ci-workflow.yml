@@ -1,20 +1,21 @@
+name: primeiro-workflow
 on:
-  # Trigger analysis when pushing in master or pull requests, and when creating
-  # a pull request. 
   push:
     branches:
       - master
       - develop
-  pull_request:
-      types: [opened, synchronize, reopened]
-name: Main Workflow
 jobs:
-  sonarcloud:
+  npm-job:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: Install Dependencies
+        run: |
+          npm install
+          npm run build
+          npm test
+  sonar-publish:
+    runs-on: ubuntu-latest
+    needs: npm-job
+    steps:
+      - name: Publish Sonar
+        run: npm run sonar
