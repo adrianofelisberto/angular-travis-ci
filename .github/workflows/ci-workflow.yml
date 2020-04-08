@@ -1,0 +1,21 @@
+name: primeiro-workflow
+on:
+  push:
+    branches:
+      - master
+      - develop
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Adriano
+      run: |
+        echo $MY_VAR $FIRST_NAME.
+  npm-job:
+    steps:
+      - name: Install Dependencies
+      run: npm install
