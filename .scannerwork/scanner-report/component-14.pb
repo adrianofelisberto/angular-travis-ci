@@ -1,1 +1,0 @@
- 2cssXhr src/app/test/test.component.scss

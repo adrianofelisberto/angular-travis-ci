@@ -1,8 +1,0 @@
-<div>
-  <h1>
-    Meu projeto Angular
-  </h1>
-  <h3>
-    Teste de CI/CD do GitHub, Trabalhando com Workflows
-  </h3>
-</div>
