@@ -26,10 +26,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-workflow-git-hub');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-workflow-git-hub app is running!');
-  });
 });

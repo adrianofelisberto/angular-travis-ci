@@ -83,6 +83,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "codeCoverage": true,
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-workflow-git-hub"
+    }
+  },
+  "defaultProject": "angular-workflow-git-hub",
+  "cli": {
+    "analytics": "d2f6154e-1f9a-41aa-9a7e-b609da95c139"
+  }
 }
