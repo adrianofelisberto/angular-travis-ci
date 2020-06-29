@@ -1,27 +1,34 @@
-# AngularTravisCi
+<div align="center">
+  <h1>Estudo Travis-ci</h1>
+  <img width="200" src="./public/travis-ci.png">
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+___
+## 📝Sobre
 
-## Development server
+Este projeto tem como objetivo praticar CI/CD, utilizando o Travis-CI, assim como a integração com o Sonar.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+O projeto foi gerado utilizando o [Angular CLI](https://github.com/angular/angular-cli), na versão 9.1.0.
 
-## Code scaffolding
+___
+## 🚀 Tecnologias Utilizadas
+- [Travis-CI](https://travis-ci.com/)
+- [Angular](https://angular.io)
+- [Sonar](https://sonarcloud.io/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+___
+### :package: Como baixar o projeto
+``` bash
+  # Clonar o repositório
+  $ git clone https://github.com/adrianofelisberto/angular-travis-ci.git
 
-## Build
+  # Entrar no diretório
+  $ cd angular-travis-ci
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  # Instalar as dependências
+  $ npm install
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  # Iniciar o projeto
+  $ npm start
+  
+```
